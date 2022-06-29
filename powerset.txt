@@ -3,7 +3,7 @@ using namespace std;
 
 void powerSetStr(string s){
 
-	int l = s.size();
+int l = s.size();
 	int q = pow(2,l);
 
 	fori(i,q){ // Start with 1 if empty string is not requires
