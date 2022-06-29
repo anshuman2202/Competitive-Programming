@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void powerSetStr(string s){
+
+	int l = s.size();
+	int q = pow(2,l);
+
+	fori(i,q){ // Start with 1 if empty string is not requires
+		string g = "";
+		fori(j,l){
+			if(i&(1<<j)) g+=s[j];
+		}
+		cout<<g<<"\n";
+	}
+}
+
+void powerSetArr(vector<int> v){
+
+	int l = v.size();
+	int q = pow(2,l);
+
+	fori(i,q){ // Start with 1 if empty string is not requires
+		int sum=0;
+		fori(j,l){
+			if(i&(1<<j)) sum+=v[j];
+		}
+		cout<<sum<<"\n";
+	}
+}
+
+int main(){
+	vector<int> v(3);
+	v[0]=1; v[1]=2; v[2]=3;
+	powerSetArr(v); 
+	powerSetStr("abc");
+}
